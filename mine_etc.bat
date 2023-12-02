@@ -1,10 +1,5 @@
 @echo off
 :WriteToFile
-echo Writing to file...
-FOR /L %%G IN (1,1,10) DO (
-    echo %%G >> 1.txt
-    timeout /t 1 /nobreak >nul
-)
 setlocal enableDelayedExpansion
 set "POOL=etc.ntminer.vip:26666"
 set "POOL2=stratum+ssl://etc.ntminer.vip:25555"
